@@ -1,0 +1,3 @@
+﻿  Selection sort.cpp
+C:\Users\Глеб\Documents\GitHub\Sorting-algorithms\Selection sort\Selection sort.cpp(30,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Selection sort.vcxproj -> C:\Users\Глеб\Documents\GitHub\Sorting-algorithms\Selection sort\Debug\Selection sort.exe
