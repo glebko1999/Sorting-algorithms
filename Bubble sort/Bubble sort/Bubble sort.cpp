@@ -4,13 +4,13 @@
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
-void swap_array_elements(int a, int b, int arr[])
+void swap_array_elements(int a, int b, int arr[])	/*Функция перестановки переменных*/
 {
 	int temp = arr[a];
 	arr[a] = arr[b];
 	arr[b] = temp;
 }
-void printf_array_elements(int arr[]) {
+void printf_array_elements(int arr[]) {			/*Функция для вывода массива*/
 	for (int i = 0; i < 10; i++) {
 		std::cout << arr[i] << "\t";
 	}
@@ -24,10 +24,10 @@ int main()
 	std::cout << "Enter lower limit: ";
 	std::cin >> min;
 	srand(time(NULL));
-	int Array[10],i,a=1;
+	int Array[10],i,completion=0;
 
 	for (i = 0; i < 10; i++) {
-		Array[i] = min + rand() % (max - min + 1);
+		Array[i] = min + rand() % (max - min + 1);  /*Создание случайного набора символов со значениями от min до max*/
 	}
 	printf_array_elements(Array);
 
@@ -37,10 +37,15 @@ int main()
 			if (Array[i] > Array[i + 1]) {
 				swap_array_elements(i, i + 1, Array);
 			}
+			else { completion++; }
 		}
-		printf_array_elements(Array);
+		if (completion == 9)
+		{
+			break;
+		}
+		else { completion = 0; }
+		printf_array_elements(Array);	
 	}
-	printf_array_elements(Array);
 }
 
 
